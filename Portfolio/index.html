@@ -27,7 +27,7 @@
                     <div class="hidden md:flex space-x-8 items-center">
                         <a href="#" class="text-white hover:text-gray-300 px-3 py-2 transition duration-300 dark:hover:text-gray-400">Home</a>
                         <a href="#" class="text-gray-300 hover:text-white px-3 py-2 transition duration-300 dark:text-gray-400 dark:hover:text-gray-200">Sobre</a>
-                        <a href="#" class="text-gray-300 hover:text-white px-3 py-2 transition duration-300 dark:text-gray-400 dark:hover:text-gray-200">Projetos</a>
+                        <a href="#newWork" class="text-gray-300 hover:text-white px-3 py-2 transition duration-300 dark:text-gray-400 dark:hover:text-gray-200">Projetos</a>
                         <div class="flex space-x-4 ml-4">
                             <a href="#" class="text-gray-300 hover:text-white transition duration-300 dark:hover:text-gray-400">
                                 <i class="fab fa-linkedin-in text-lg"></i>
@@ -140,99 +140,185 @@
             </div>
         </div>
     </main>
+     <div class="w-full py-4 flex justify-center relative z-10" style="margin-top: 25px;">
+        <button id="scrollToProjects" class="flex flex-col items-center group cursor-pointer animate-bounce">
+            <span class="text-sm text-gray-600 dark:text-gray-300 mb-2">Role para baixo</span>
+            <div class="w-6 h-6 border-r-2 border-b-2 border-blue-600 dark:border-blue-400 transform rotate-45 group-hover:border-blue-800 dark:group-hover:border-blue-300 transition-colors duration-300"></div>
+        </button>
+    </div>
+
     <!-- Seção de Projetos -->
 <section class="py-16 px-4 mx-auto max-w-7xl relative">
     <!-- Cabeçalho com seta -->
     <div class="flex justify-between items-center mb-12">
         <div>
-            <p class="text-blue-600 font-medium dark:text-blue-400">Novo trabalho</p>
+            <p class="text-blue-600 font-medium dark:text-blue-400" id="newWork">Novo trabalho</p>
             <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-2">Veja os projetos em destaque</h2>
         </div>
-        <div class="flex space-x-4">
-            <button class="arrow-btn left-arrow bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="arrow-btn right-arrow bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+        
     </div>
 
     <!-- Grid de Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-cards">
         <!-- Card 1: Travalgram -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                     alt="Travalgram" class="project-image">
+                <img src="assets/images/thumbnail/card01.png" 
+                     alt="Client CLI" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Travalgram</h3>
-                <p class="project-description">Rede social onde as pessoas mostram os registros de suas viagens pelo mundo</p>
+                <h3 class="project-title">Client CLI</h3>
+                <p class="project-description">Gerencia clientes e produtos em débito com funções básicas: cadastrar, visualizar, editar e excluir registros.</p>
             </div>
         </div>
 
         <!-- Card 2: Tech News -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                <img src="assets/images/thumbnail/card02.webp" 
                      alt="Tech News" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Tech News</h3>
-                <p class="project-description">Homepage de um portal de notícias sobre a área de tecnologia</p>
+                <h3 class="project-title">API CAR</h3>
+                <p class="project-description">Aplicação que consome a API da tabela FIPE para Buscar Informações de veículos, como preço, marca, modelo e ano de fabricação</p>
             </div>
         </div>
 
         <!-- Card 3: Zingen -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                <img src="assets/images/thumbnail/card03.jpg" 
                      alt="Zingen" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Zingen</h3>
-                <p class="project-description">Landing Page completa e responsiva de um aplicativo de Karaokê</p>
+                <h3 class="project-title">RC Barbearia</h3>
+                <p class="project-description">Página institucional responsiva para divulgar serviços, preços e contatos da barbearia para agendamentos.</p>
             </div>
         </div>
 
         <!-- Card 4: Refund -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                <img src="assets/images/thumbnail/card06.jpg" 
                      alt="Refund" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Refund</h3>
-                <p class="project-description">Um sistema para pedido e acompanhamento de reembolso</p>
+                <h3 class="project-title">Gerenciador De Grupos Universitários</h3>
+                <p class="project-description">Um sistema de gerenciamento de grupos</p>
             </div>
         </div>
 
         <!-- Card 5: Página de receita -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                     alt="Página de receita" class="project-image">
+                <img src="assets/images/thumbnail/card05.avif" 
+                     alt="Página Conversão de moedas" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Página de receita</h3>
-                <p class="project-description">Página com o passo a passo de uma receita para cupcakes</p>
+                <h3 class="project-title">Conversor de Moedas</h3>
+                <p class="project-description">Converta moedas de forma rápida e precisa com nosso conversor online! Taxas atualizadas em tempo real e interface simples para cálculos fáceis</p>
             </div>
         </div>
 
         <!-- Card 6: Página de turismo -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="https://images.unsplash.com/photo-1538970272646-f61fabb3be33?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                     alt="Página de turismo" class="project-image">
+                <img src="assets/images/thumbnail/card04.jpeg" 
+                     alt="Calculadora" class="project-image">
             </div>
             <div class="project-content">
-                <h3 class="project-title">Página de turismo</h3>
-                <p class="project-description">Página com as principais informações para quem quer viajar para Busan</p>
+                <h3 class="project-title">Calculadora</h3>
+                <p class="project-description">Calculadora prática e eficiente para operações matemáticas básicas e avançadas.</p>
             </div>
         </div>
     </div>
 </section>
+    <!-- Seção de Formação Acadêmica -->
+    <section class="py-16 px-4 mx-auto max-w-7xl bg-gray-50 dark:bg-gray-800 rounded-lg my-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Formação Acadêmica</h2>
+            <p class="text-gray-600 mt-2 dark:text-gray-400">Minha jornada educacional e certificações</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Formação 1 - Uniceub -->
+            <div class="education-card p-6 rounded-lg shadow-md bg-white dark:bg-gray-700 transition-all hover:shadow-lg">
+                <div class="flex items-start">
+                    <div class="education-icon mr-4 text-blue-600 dark:text-blue-400">
+                        <i class="fas fa-graduation-cap text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mt-1">Uniceub - Centro Universitário de Brasília</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">2023 - 2025 (Concluído)</p>
+                        <p class="text-gray-700 dark:text-gray-200 mt-3">Graduação com foco em desenvolvimento de software, arquitetura de sistemas, banco de dados e engenharia de software.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formação 2 - DIO -->
+            <div class="education-card p-6 rounded-lg shadow-md bg-white dark:bg-gray-700 transition-all hover:shadow-lg">
+                <div class="flex items-start">
+                    <div class="education-icon mr-4 text-blue-600 dark:text-blue-400">
+                        <i class="fas fa-certificate text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Desenvolvimento Web Fullstack</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mt-1">Digital Innovation One</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">2023 - 120 horas</p>
+                        <p class="text-gray-700 dark:text-gray-200 mt-3">Bootcamp intensivo com foco em HTML, CSS, JavaScript, React, Node.js e bancos de dados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Seção Sobre Mim -->
+    <section class="py-16 px-4 mx-auto max-w-4xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Sobre Mim</h2>
+            <p class="text-gray-600 mt-2 dark:text-gray-400">Minha jornada e experiência</p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div class="prose dark:prose-invert max-w-none">
+                <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Minha Introdução</h3>
+                
+                <p class="text-gray-700 dark:text-gray-300 mb-6">
+                    Olá, meu nome é João Paulo e sou apaixonado por transformar ideias em código! Meu interesse por desenvolvimento começou em 2019 quando tive meu primeiro contato com programação na faculdade. Desde então, venho me dedicando a criar soluções tecnológicas inovadoras.
+                </p>
+                
+                <p class="text-gray-700 dark:text-gray-300 mb-6">
+                    Atualmente, tenho o privilégio de atuar como Desenvolvedor Fullstack, trabalhando com diversas tecnologias para construir aplicações web completas e eficientes. Meu foco principal está em desenvolver sistemas robustos, interfaces intuitivas e experiências digitais que realmente agregam valor aos usuários.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg text-center">
+                        <span class="text-3xl font-bold text-blue-600 dark:text-blue-400">03+</span>
+                        <p class="text-gray-600 dark:text-gray-300 mt-2">Anos de experiência</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg text-center">
+                        <span class="text-3xl font-bold text-blue-600 dark:text-blue-400">15+</span>
+                        <p class="text-gray-600 dark:text-gray-300 mt-2">Projetos completos</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-600 p-4 rounded-lg text-center">
+                        <span class="text-3xl font-bold text-blue-600 dark:text-blue-400">02+</span>
+                        <p class="text-gray-600 dark:text-gray-300 mt-2">Empresas trabalhadas</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="assets/docs/Currículo João Paulo Resende Costa.pdf" download="JoaoPaulo-Curriculo.pdf" 
+                    class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                    Download CV
+                    <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Rodapé ajustado -->
     <footer class="py-4 text-center text-sm text-gray-500 border-t mt-auto dark:border-gray-700 dark:text-gray-400">
         © 2023 João Paulo - Todos os direitos reservados

@@ -97,3 +97,27 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.addEventListener('click', toggleDarkMode);
     themeToggleMobile.addEventListener('click', toggleDarkMode);
 });
+
+
+// Scroll para projetos
+document.getElementById('scrollToProjects').addEventListener('click', () => {
+    const projectsSection = document.getElementById('newWork').offsetParent;
+    projectsSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+// Esconder/mostrar botão
+window.addEventListener('scroll', () => {
+    const scrollBtn = document.getElementById('scrollToProjects');
+    const projectsSection = document.getElementById('newWork').offsetParent;
+    const projectsPosition = projectsSection.getBoundingClientRect().top;
+    
+    if (projectsPosition < window.innerHeight / 2) {
+        scrollBtn.parentElement.classList.add('opacity-0', 'pointer-events-none');
+        scrollBtn.parentElement.classList.remove('animate-bounce');
+    } else {
+        scrollBtn.parentElement.classList.remove('opacity-0', 'pointer-events-none');
+        scrollBtn.parentElement.classList.add('animate-bounce');
+    }
+});
