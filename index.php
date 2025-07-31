@@ -1,3 +1,7 @@
+<?php
+require 'enviar_email.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
     <script>
         tailwind.config = {
             darkMode: 'class'
@@ -14,22 +19,6 @@
     </script>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen dark:bg-gray-900">
-    
-    <!-- Efeito de bolhas no background -->
-    <div class="bubbles">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-    
-    <!-- Restante do seu conteúdo -->
     <header>
         <nav class="bg-gray-800 shadow-lg dark:bg-gray-950">
             <div class="max-w-6xl mx-auto px-4">
@@ -125,32 +114,32 @@
                 <!-- Tecnologias em linha única -->
                 <div class="tech-tags-container mt-6 w-full">
                     <div class="tech-tags flex flex-wrap justify-center gap-2 px-2">
-                        <span class="tech-tag tech-tag-github">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/github.svg" alt="GitHub" class="tech-icon">
                             GitHub
                         </span>
-                        <span class="tech-tag tech-tag-html">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/html.svg" alt="HTML" class="tech-icon">
                             HTML
                         </span>
-                        <span class="tech-tag tech-tag-css">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/css.svg" alt="CSS" class="tech-icon">
                             CSS
                         </span>
-                        <span class="tech-tag tech-tag-javascript">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/javascript.svg" alt="JavaScript" class="tech-icon">
                             JavaScript
                         </span>
-                        <span class="tech-tag tech-tag-react">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/reactjs.svg" alt="React" class="tech-icon">
                             React
                         </span>
-                        <span class="tech-tag tech-tag-node">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
                             <img src="./assets/icons/tech/nodejs.svg" alt="Node.js" class="tech-icon">
                             Node.js
                         </span>
-                        <span class="tech-tag tech-tag-php">
-                            <img src="./assets/icons/tech/php.svg" alt="PHP" class="tech-icon">
+                        <span class="tech-tag dark:bg-gray-700 dark:text-gray-200">
+                            <img src="./assets/icons/tech/php.svg" alt="Node.js" class="tech-icon">
                             PHP
                         </span>
                     </div>
@@ -173,144 +162,84 @@
             <p class="text-blue-600 font-medium dark:text-blue-400" id="newWork">Novo trabalho</p>
             <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mt-2">Veja os projetos em destaque</h2>
         </div>
+        
     </div>
 
     <!-- Grid de Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-cards">
-        <!-- Card 1: Client CLI -->
+        <!-- Card 1: Travalgram -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card01.png" alt="Client CLI" class="project-image">
+                <img src="assets/images/thumbnail/card01.png" 
+                     alt="Client CLI" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">Client CLI</h3>
                 <p class="project-description">Gerencia clientes e produtos em débito com funções básicas: cadastrar, visualizar, editar e excluir registros.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-node">Node.js</span>
-                    <span class="tech-tag tech-tag-javascript">JavaScript</span>
-                    <span class="tech-tag tech-tag-cli">CLI</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
             </div>
         </div>
 
-        <!-- Card 2: API CAR -->
+        <!-- Card 2: Tech News -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card02.webp" alt="API CAR" class="project-image">
+                <img src="assets/images/thumbnail/card02.webp" 
+                     alt="Tech News" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">API CAR</h3>
-                <p class="project-description">Aplicação que consome a API da tabela FIPE para buscar informações de veículos, como preço, marca, modelo e ano de fabricação.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-javascript">JavaScript</span>
-                    <span class="tech-tag tech-tag-api">API REST</span>
-                    <span class="tech-tag tech-tag-bootstrap">Bootstrap</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+                <p class="project-description">Aplicação que consome a API da tabela FIPE para Buscar Informações de veículos, como preço, marca, modelo e ano de fabricação</p>
             </div>
         </div>
 
-        <!-- Card 3: RC Barbearia -->
+        <!-- Card 3: Zingen -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card03.jpg" alt="RC Barbearia" class="project-image">
+                <img src="assets/images/thumbnail/card03.jpg" 
+                     alt="Zingen" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">RC Barbearia</h3>
                 <p class="project-description">Página institucional responsiva para divulgar serviços, preços e contatos da barbearia para agendamentos.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-html">HTML</span>
-                    <span class="tech-tag tech-tag-css">CSS</span>
-                    <span class="tech-tag tech-tag-javascript">JavaScript</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
             </div>
         </div>
 
-        <!-- Card 4: Gerenciador De Grupos Universitários -->
+        <!-- Card 4: Refund -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card06.jpg" alt="Gerenciador De Grupos Universitários" class="project-image">
+                <img src="assets/images/thumbnail/card06.jpg" 
+                     alt="Refund" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">Gerenciador De Grupos Universitários</h3>
-                <p class="project-description">Um sistema completo para gerenciamento de grupos acadêmicos com controle de membros, tarefas e projetos.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-laravel">Laravel</span>
-                    <span class="tech-tag tech-tag-php">PHP</span>
-                    <span class="tech-tag tech-tag-mysql">MySQL</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+                <p class="project-description">Um sistema de gerenciamento de grupos</p>
             </div>
         </div>
 
-        <!-- Card 5: Conversor de Moedas -->
+        <!-- Card 5: Página de receita -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card05.avif" alt="Conversor de Moedas" class="project-image">
+                <img src="assets/images/thumbnail/card05.avif" 
+                     alt="Página Conversão de moedas" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">Conversor de Moedas</h3>
-                <p class="project-description">Converta moedas de forma rápida e precisa com nosso conversor online! Taxas atualizadas em tempo real e interface simples.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-react">React</span>
-                    <span class="tech-tag tech-tag-api">API</span>
-                    <span class="tech-tag tech-tag-tailwind">Tailwind</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+                <p class="project-description">Converta moedas de forma rápida e precisa com nosso conversor online! Taxas atualizadas em tempo real e interface simples para cálculos fáceis</p>
             </div>
         </div>
 
-        <!-- Card 6: Calculadora -->
+        <!-- Card 6: Página de turismo -->
         <div class="project-card group">
             <div class="project-image-container">
-                <img src="assets/images/thumbnail/card04.jpeg" alt="Calculadora" class="project-image">
+                <img src="assets/images/thumbnail/card04.jpeg" 
+                     alt="Calculadora" class="project-image">
             </div>
             <div class="project-content">
                 <h3 class="project-title">Calculadora</h3>
-                <p class="project-description">Calculadora prática e eficiente para operações matemáticas básicas e avançadas com interface intuitiva.</p>
-                <div class="project-tech">
-                    <span class="tech-tag tech-tag-javascript">JavaScript</span>
-                    <span class="tech-tag tech-tag-css">CSS</span>
-                    <span class="tech-tag tech-tag-html">HTML</span>
-                </div>
-                <a href="#" class="project-access">
-                    Acessar Projeto
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+                <p class="project-description">Calculadora prática e eficiente para operações matemáticas básicas e avançadas.</p>
             </div>
         </div>
     </div>
 </section>
-
     <!-- Seção de Formação Acadêmica -->
     <section class="py-16 px-4 mx-auto max-w-7xl bg-gray-50 dark:bg-gray-800 rounded-lg my-8">
         <div class="text-center mb-12">
@@ -387,7 +316,7 @@
                 </div>
                 
                 <div class="mt-8 text-center">
-                    <a href="assets/docs/" download="JoaoPaulo-Curriculo.pdf" 
+                    <a href="assets/docs/Currículo João Paulo Resende Costa.pdf" download="JoaoPaulo-Curriculo.pdf" 
                     class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
                     Download CV
                     <i class="fas fa-download ml-2"></i>
@@ -396,6 +325,9 @@
             </div>
         </div>
     </section>
+    
+    </div>
+
    <!-- Seção de Contato Estilizada -->
 <section class="py-16 px-4 mx-auto max-w-2xl" id="contato">
     <div class="text-center mb-10">
@@ -484,9 +416,8 @@
     </div>
 </section>
 
-  <!-- Footer Corrigido -->
-  <footer class="w-full bg-gray-800 dark:bg-gray-900 text-white">
-    <div class="footer-container mx-auto px-4 py-12">
+  <footer class="bg-gray-800 text-gray-300 py-12 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Coluna 1: Logo e descrição -->
             <div class="md:col-span-2">
@@ -494,7 +425,7 @@
                     <img src="assets/icons/Logotipo_empresa_de_programação_sistemas_e_tecnologia-removebg-preview.png" 
                          alt="João Paulo - Dev Fullstack" 
                          class="h-12">
-                    <span class="ml-2 text-xl font-semibold">João Paulo</span>
+                    <span class="ml-2 text-xl font-semibold text-white">João Paulo</span>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed">
                     Desenvolvedor Fullstack apaixonado por criar soluções inovadoras e eficientes. 
@@ -504,7 +435,7 @@
 
             <!-- Coluna 2: Links rápidos -->
             <div>
-                <h3 class="font-semibold text-lg mb-4 uppercase tracking-wider">Links Rápidos</h3>
+                <h3 class="text-white font-semibold text-lg mb-4 uppercase tracking-wider">Links Rápidos</h3>
                 <ul class="space-y-2">
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sobre</a></li>
@@ -515,7 +446,7 @@
 
             <!-- Coluna 3: Contato -->
             <div>
-                <h3 class="font-semibold text-lg mb-4 uppercase tracking-wider">Contato</h3>
+                <h3 class="text-white font-semibold text-lg mb-4 uppercase tracking-wider">Contato</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
                         <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
@@ -540,37 +471,42 @@
             </div>
         </div>
 
-        <!-- Divisor e rodapé inferior -->
-        <div class="border-t border-gray-700 mt-10 pt-8">
+        <!-- Divisor -->
+        <div class="border-t border-gray-700 dark:border-gray-800 mt-10 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Direitos autorais -->
                 <div class="mb-4 md:mb-0">
                     <p class="text-sm text-gray-500">
                         &copy; 2023 João Paulo. Todos os direitos reservados.
                     </p>
                 </div>
-                
+
+                <!-- Redes sociais -->
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://github.com/joaopaulo-dev" target="_blank" 
+                       class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-github text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://www.linkedin.com/in/joaopauloresende/" target="_blank" 
+                       class="text-gray-400 hover:text-white transition duration-300">
                         <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                        <i class="fab fa-instagram text-xl"></i>
+                    <a href="https://wa.me/5561998278558" target="_blank" 
+                       class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
                     </a>
                 </div>
             </div>
-            
+
+            <!-- Créditos -->
             <div class="mt-6 text-center md:text-right">
-                <p class="text-xs text-gray-500">
-                    Feito com <i class="fas fa-heart text-red-500"></i> por João Paulo
+                <p class="text-xs text-gray-600 dark:text-gray-500">
+                    Feito com <i class="fas fa-heart text-red-500"></i> e <i class="fas fa-coffee text-amber-600"></i> por João Paulo
                 </p>
             </div>
         </div>
     </div>
 </footer>
-
     <script src="index.js"></script>
 </body>
 </html>
